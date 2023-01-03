@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./lib/anime.min.js" defer></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js" defer></script>
+
+</head>
+<header>
+
+    <div id="Search-Container">
+        <h1>flick<span>r</span></h1>
+        <div id="Input-Container">
+            <input type="search" id="search-input" placeholder="Search phrase">
+            <button id="search-button">Search</button>
+        </div>
+    </div>
+    
+    <div id="Container">
+
+        <div id="Filter-Container">
+            <label for="filters">Choose a filter:</label>
+
+            <select name="filters" id="filters">
+                <option value="date-posted-asc">Date posted</option>
+                <option value="interestingness-asc">Interestingness</option>
+                <option value="relevance">Relevance</option>
+            </select>
+        </div>
+        <div id="Size-Container">
+            <div class="form-check">
+                <input class="form-input" type="radio" name="flexRadioDefault" value="m" id="flexRadioDefault1" checked>
+                <label class="form-check-label" for="flexRadioDefault1">
+                    Small
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="z">
+                <label class="form-check-label" for="flexRadioDefault2">
+                    Medium
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="b">
+                <label class="form-check-label" for="flexRadioDefault3">
+                    Large
+                </label>
+            </div>
+        </div>
+
+        <div id="Number-Container">
+            <label for="numbers">Amount of photos:</label>
+
+            <select name="numbers" id="numbers">
+                <option value="15">15</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+            </select>
+        </div>
+
+        
+    </div>
+</header>
+
+<body>
+    <div id="picture-container">
+        <div class="square el"></div>
+    </div>
+</body>
+
+<footer>
+
+</footer>
+
+</html>
