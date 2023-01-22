@@ -15,7 +15,7 @@ function getData() {
     const input = document.getElementById("search-input");
     if(input.value == ""){
         if(pictureContainer.innerHTML !== ""){
-            pictureContainer.innerHTML = "";
+            pictureContainer.innerHTML = ""; 
         }
         pictureContainer.append(errorMsg);
         return;
@@ -42,18 +42,16 @@ async function fetchDataFromApi() {
     let searchPhrase = input.value;
 
     let apiUrl = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=3711549301e595f9af88b2a73ba3a0aa&text=${searchPhrase}&sort=${selectedValueFromDropDown}&per_page=${selectedValueFromAmount}=&format=json&nojsoncallback=1`;
-
     await fetch(apiUrl)
         .then((res) => res.json())
         .then((data) => appendDataToDom(data))
         .then(function () {
             displayLoading(false)
         });
-    
 }
 
 function appendDataToDom(data) {
-    if(data.photos.length < 0){
+    if(data.photos.photo.length === 0){
         pictureContainer.append(errorMsg);
         return;
     }
